@@ -1,0 +1,7 @@
+! Title: zhihu 重定向客户端链接
+! Description: 重定向 客户端链接 到 网页链接
+! Version: 0.1.0.0
+! Expires: 15 days
+
+
+||zhihu:/$replace=/.*/<html><script>window.location.replace("https:\/\/www.zhihu.com" + window.location.pathname.split("\/")[3]);<\/script><\/html>/s
