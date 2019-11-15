@@ -1,7 +1,7 @@
-! Title: zhihu 重定向客户端链接
-! Description: 重定向 客户端链接 到 网页链接
-! Version: 0.1.0.0
+! Title: 知乎重定向
+! Description: 修改UserAgent使知乎通过桌面端加载
+! Version: 1.0.0.0
 ! Expires: 15 days
 
 
-||zhihu:/$replace=/.*/<html><script>window.location.replace("https:\/\/www.zhihu.com" + window.location.pathname.split("\/")[3]);<\/script><\/html>/s
+zhihu.com#%#var originalUserAgent = navigator.userAgent; Object.defineProperty(navigator, 'userAgent', { get: function() { return ‘Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36 OPR/43.0.2442.806'; } });
